@@ -27,6 +27,60 @@ a, a:visited, a:hover {
   text-decoration: none;
 }
 
+.return-button {
+  position: fixed;
+  top: 2rem;
+  left: 0.5rem;
+  z-index: 1;
+  background: #f9f002;
+  border: 0;
+  color: #000;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+@media (min-width: 40em) {
+  .return-button {
+    left: 1.5rem;
+  }
+}
+
+.return-button::after {
+  content: attr(data-text);
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, yellow 5%);
+  text-shadow: -3px -3px 0px #f9f002, 3px 3px 0px #00E6F6;
+  -webkit-clip-path: inset(50% 50% 50% 50%);
+          clip-path: inset(50% 50% 50% 50%);
+}
+
+.return-button:hover {
+  cursor: pointer;
+  color: #FF013C;
+}
+
+.return-button:hover::after {
+  -webkit-animation: 0.2s glitch-hover;
+          animation: 0.2s glitch-hover;
+  -webkit-animation-timing-function: steps(1, end);
+          animation-timing-function: steps(1, end);
+}
+
 @-webkit-keyframes glitch-hover {
   0% {
     -webkit-clip-path: inset(80% -6px 0 0);
@@ -371,135 +425,135 @@ a, a:visited, a:hover {
 
 @-webkit-keyframes noise-anim {
   0% {
-    -webkit-clip-path: inset(2% 0 40% 0);
-            clip-path: inset(2% 0 40% 0);
+    -webkit-clip-path: inset(95% 0 4% 0);
+            clip-path: inset(95% 0 4% 0);
   }
   6.66667% {
-    -webkit-clip-path: inset(46% 0 7% 0);
-            clip-path: inset(46% 0 7% 0);
+    -webkit-clip-path: inset(33% 0 64% 0);
+            clip-path: inset(33% 0 64% 0);
   }
   13.33333% {
-    -webkit-clip-path: inset(40% 0 23% 0);
-            clip-path: inset(40% 0 23% 0);
+    -webkit-clip-path: inset(30% 0 30% 0);
+            clip-path: inset(30% 0 30% 0);
   }
   20% {
-    -webkit-clip-path: inset(86% 0 16% 0);
-            clip-path: inset(86% 0 16% 0);
+    -webkit-clip-path: inset(82% 0 17% 0);
+            clip-path: inset(82% 0 17% 0);
   }
   26.66667% {
-    -webkit-clip-path: inset(90% 0 2% 0);
-            clip-path: inset(90% 0 2% 0);
+    -webkit-clip-path: inset(85% 0 10% 0);
+            clip-path: inset(85% 0 10% 0);
   }
   33.33333% {
-    -webkit-clip-path: inset(47% 0 7% 0);
-            clip-path: inset(47% 0 7% 0);
+    -webkit-clip-path: inset(119% 0 4% 0);
+            clip-path: inset(119% 0 4% 0);
   }
   40% {
-    -webkit-clip-path: inset(63% 0 22% 0);
-            clip-path: inset(63% 0 22% 0);
+    -webkit-clip-path: inset(99% 0 7% 0);
+            clip-path: inset(99% 0 7% 0);
   }
   46.66667% {
-    -webkit-clip-path: inset(42% 0 34% 0);
-            clip-path: inset(42% 0 34% 0);
+    -webkit-clip-path: inset(101% 0 21% 0);
+            clip-path: inset(101% 0 21% 0);
   }
   53.33333% {
-    -webkit-clip-path: inset(72% 0 5% 0);
-            clip-path: inset(72% 0 5% 0);
+    -webkit-clip-path: inset(6% 0 26% 0);
+            clip-path: inset(6% 0 26% 0);
   }
   60% {
-    -webkit-clip-path: inset(30% 0 46% 0);
-            clip-path: inset(30% 0 46% 0);
+    -webkit-clip-path: inset(62% 0 48% 0);
+            clip-path: inset(62% 0 48% 0);
   }
   66.66667% {
-    -webkit-clip-path: inset(87% 0 10% 0);
-            clip-path: inset(87% 0 10% 0);
+    -webkit-clip-path: inset(41% 0 37% 0);
+            clip-path: inset(41% 0 37% 0);
   }
   73.33333% {
-    -webkit-clip-path: inset(49% 0 66% 0);
-            clip-path: inset(49% 0 66% 0);
+    -webkit-clip-path: inset(57% 0 57% 0);
+            clip-path: inset(57% 0 57% 0);
   }
   80% {
-    -webkit-clip-path: inset(118% 0 5% 0);
-            clip-path: inset(118% 0 5% 0);
+    -webkit-clip-path: inset(39% 0 74% 0);
+            clip-path: inset(39% 0 74% 0);
   }
   86.66667% {
-    -webkit-clip-path: inset(117% 0 4% 0);
-            clip-path: inset(117% 0 4% 0);
+    -webkit-clip-path: inset(77% 0 24% 0);
+            clip-path: inset(77% 0 24% 0);
   }
   93.33333% {
-    -webkit-clip-path: inset(79% 0 36% 0);
-            clip-path: inset(79% 0 36% 0);
+    -webkit-clip-path: inset(4% 0 45% 0);
+            clip-path: inset(4% 0 45% 0);
   }
   100% {
-    -webkit-clip-path: inset(10% 0 75% 0);
-            clip-path: inset(10% 0 75% 0);
+    -webkit-clip-path: inset(8% 0 67% 0);
+            clip-path: inset(8% 0 67% 0);
   }
 }
 
 @keyframes noise-anim {
   0% {
-    -webkit-clip-path: inset(2% 0 40% 0);
-            clip-path: inset(2% 0 40% 0);
+    -webkit-clip-path: inset(95% 0 4% 0);
+            clip-path: inset(95% 0 4% 0);
   }
   6.66667% {
-    -webkit-clip-path: inset(46% 0 7% 0);
-            clip-path: inset(46% 0 7% 0);
+    -webkit-clip-path: inset(33% 0 64% 0);
+            clip-path: inset(33% 0 64% 0);
   }
   13.33333% {
-    -webkit-clip-path: inset(40% 0 23% 0);
-            clip-path: inset(40% 0 23% 0);
+    -webkit-clip-path: inset(30% 0 30% 0);
+            clip-path: inset(30% 0 30% 0);
   }
   20% {
-    -webkit-clip-path: inset(86% 0 16% 0);
-            clip-path: inset(86% 0 16% 0);
+    -webkit-clip-path: inset(82% 0 17% 0);
+            clip-path: inset(82% 0 17% 0);
   }
   26.66667% {
-    -webkit-clip-path: inset(90% 0 2% 0);
-            clip-path: inset(90% 0 2% 0);
+    -webkit-clip-path: inset(85% 0 10% 0);
+            clip-path: inset(85% 0 10% 0);
   }
   33.33333% {
-    -webkit-clip-path: inset(47% 0 7% 0);
-            clip-path: inset(47% 0 7% 0);
+    -webkit-clip-path: inset(119% 0 4% 0);
+            clip-path: inset(119% 0 4% 0);
   }
   40% {
-    -webkit-clip-path: inset(63% 0 22% 0);
-            clip-path: inset(63% 0 22% 0);
+    -webkit-clip-path: inset(99% 0 7% 0);
+            clip-path: inset(99% 0 7% 0);
   }
   46.66667% {
-    -webkit-clip-path: inset(42% 0 34% 0);
-            clip-path: inset(42% 0 34% 0);
+    -webkit-clip-path: inset(101% 0 21% 0);
+            clip-path: inset(101% 0 21% 0);
   }
   53.33333% {
-    -webkit-clip-path: inset(72% 0 5% 0);
-            clip-path: inset(72% 0 5% 0);
+    -webkit-clip-path: inset(6% 0 26% 0);
+            clip-path: inset(6% 0 26% 0);
   }
   60% {
-    -webkit-clip-path: inset(30% 0 46% 0);
-            clip-path: inset(30% 0 46% 0);
+    -webkit-clip-path: inset(62% 0 48% 0);
+            clip-path: inset(62% 0 48% 0);
   }
   66.66667% {
-    -webkit-clip-path: inset(87% 0 10% 0);
-            clip-path: inset(87% 0 10% 0);
+    -webkit-clip-path: inset(41% 0 37% 0);
+            clip-path: inset(41% 0 37% 0);
   }
   73.33333% {
-    -webkit-clip-path: inset(49% 0 66% 0);
-            clip-path: inset(49% 0 66% 0);
+    -webkit-clip-path: inset(57% 0 57% 0);
+            clip-path: inset(57% 0 57% 0);
   }
   80% {
-    -webkit-clip-path: inset(118% 0 5% 0);
-            clip-path: inset(118% 0 5% 0);
+    -webkit-clip-path: inset(39% 0 74% 0);
+            clip-path: inset(39% 0 74% 0);
   }
   86.66667% {
-    -webkit-clip-path: inset(117% 0 4% 0);
-            clip-path: inset(117% 0 4% 0);
+    -webkit-clip-path: inset(77% 0 24% 0);
+            clip-path: inset(77% 0 24% 0);
   }
   93.33333% {
-    -webkit-clip-path: inset(79% 0 36% 0);
-            clip-path: inset(79% 0 36% 0);
+    -webkit-clip-path: inset(4% 0 45% 0);
+            clip-path: inset(4% 0 45% 0);
   }
   100% {
-    -webkit-clip-path: inset(10% 0 75% 0);
-            clip-path: inset(10% 0 75% 0);
+    -webkit-clip-path: inset(8% 0 67% 0);
+            clip-path: inset(8% 0 67% 0);
   }
 }
 
@@ -1041,7 +1095,7 @@ body {
 
 .button {
   position: relative;
-  padding: 1rem 1rem;
+  padding: 1rem;
   font-size: 1rem;
   font-weight: 700;
   background: linear-gradient(45deg, transparent 5%, #cd0030 5%);
@@ -1125,5 +1179,114 @@ body {
 
 .footer-links a:hover {
   color: #FF013C;
+}
+
+.experience {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  padding: 6rem 0.5rem 0 0.5rem;
+  margin: auto;
+  max-width: 660px;
+  color: #fff;
+}
+
+.experience-education, .experience-jobs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 0;
+  width: 100%;
+  border: 30px solid #cd0030;
+  border-right: 5px solid #cd0030;
+  border-left: 5px solid #cd0030;
+  border-bottom: 24px solid #cd0030;
+  -webkit-clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+          clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px) calc(100% - 10px), calc(80% - 15px) 100%, 80px calc(100% - 0px), 65px calc(100% - 15px), 0% calc(100% - 15px));
+}
+
+.experience-education h2, .experience-jobs h2 {
+  margin: 0;
+  padding: 0 0 2rem 0;
+  text-align: center;
+  -webkit-box-shadow: 0 5px 5px 0.5px #FF013C;
+          box-shadow: 0 5px 5px 0.5px #FF013C;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 59.375rem) {
+  .experience-education h2, .experience-jobs h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.experience-job, .experience-certificate {
+  background-color: #1b0006;
+  border-radius: 1rem;
+  margin: 3rem 0.8rem 0 0.8rem;
+  padding: 0rem 0.5rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: 1.51;
+}
+
+@media (min-width: 40em) {
+  .experience-job, .experience-certificate {
+    margin: 3rem 2rem 0 2rem;
+    padding: 0rem 1rem;
+  }
+}
+
+.experience-job h3, .experience-certificate h3 {
+  font-size: 1.3rem;
+}
+
+@media (min-width: 59.375rem) {
+  .experience-job h3, .experience-certificate h3 {
+    font-size: 1.6rem;
+  }
+}
+
+.experience-job h3 > span, .experience-certificate h3 > span {
+  font-style: italic;
+}
+
+@media (min-width: 59.375rem) {
+  .experience-job h4, .experience-certificate h4 {
+    font-size: 1.1rem;
+  }
+}
+
+.experience-job p, .experience-certificate p {
+  padding-top: 0.5rem;
+  font-weight: 400;
+}
+
+@media (min-width: 40em) {
+  .experience-job p, .experience-certificate p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 59.375rem) {
+  .experience-job p, .experience-certificate p {
+    font-size: 1.1rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */

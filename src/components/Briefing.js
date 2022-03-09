@@ -1,6 +1,10 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
 
 const Briefing = () => {
+
+    const navigate = useNavigate()
+
     return (
         <section className="briefing">
             <div className="briefing-intro">
@@ -20,6 +24,7 @@ const Briefing = () => {
                 <button
                     className="button"
                     data-text="Projects"
+                    onClick={() => navigate(`/projects`)}
                 >
                     Projects
                 </button>
@@ -27,6 +32,7 @@ const Briefing = () => {
                 <button
                     className="button"
                     data-text="Education and Experience"
+                    onClick={() => navigate(`/experience`)}
                 >
                     Education and Experience
                 </button>

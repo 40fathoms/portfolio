@@ -11,6 +11,57 @@ a, a:visited, a:hover{
     text-decoration: none;
 }
 
+//return button for Projects and Experience pages
+.return-button{
+
+    position: fixed;
+    top: 2rem;
+    left: 0.5rem;
+    z-index: 1;
+
+    background: $yellow;
+    border: 0;
+    color: $black;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0.5rem;
+      
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    @include breakpoint-up(medium){    
+        left: 1.5rem;
+    }
+
+    //glitch hover button    
+    &::after{
+        content: attr(data-text);
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 3%, $blue 3%, $blue 5%, yellow 5%);
+        text-shadow: -3px -3px 0px $yellow, 3px 3px 0px $blue;
+        clip-path: $slice-0;
+    }
+
+    &:hover{
+        cursor: pointer;
+        color: $pink;
+        &::after{
+            animation: 0.2s glitch-hover;
+            animation-timing-function: steps(1, end);
+        }
+    }
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;600;700&display=swap');
 //font-family: 'Karla', sans-serif;
