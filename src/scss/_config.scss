@@ -47,7 +47,7 @@ a, a:visited, a:hover{
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(45deg, transparent 3%, $blue 3%, $blue 5%, yellow 5%);
+        background: linear-gradient(45deg, transparent 3%, $blue 3%, $blue 5%, $yellow 5%);
         text-shadow: -3px -3px 0px $yellow, 3px 3px 0px $blue;
         clip-path: $slice-0;
     }

@@ -6,7 +6,7 @@ import AboutMe from '../components/AboutMe'
 
 const Home = () => {
   
-  //window.scroll(0,0)
+  window.scroll(0,0)
 
   return (
     <> 
