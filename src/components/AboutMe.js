@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Resume from '../resume.pdf'
+
 const AboutMe = () => {
     return (
         <section className="aboutMe">
@@ -36,12 +38,14 @@ const AboutMe = () => {
                 a few months of self-teaching.
             </p>
 
-            <button
+            <a
+                href={Resume}
+                target="_blank"
                 className="button"
                 data-text="Resume"
             >
                 Resume
-            </button>
+            </a>
 
         </section>
     )
