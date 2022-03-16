@@ -1,6 +1,15 @@
 export default [
 
     {
+        title: "Trivia Quiz",
+        background: "quiz.png",
+        liveSite: "https://quiz-40fathoms.vercel.app/",
+        repository: "https://github.com/40fathoms/quiz",
+        description: "Trivia game built on React. The user should be able to select the amount of questions, their categories, difficulty, and type. The React.useCallback( ) hook is used to fetch data from the open trivia API at the start of every new game.",
+        tools: ["API", "React", "CSS/SASS", "HTML"]
+    },
+
+    {
         title: "Tenzi Game",
         background: "tenzi.png",
         liveSite: "https://tenzies-eta.vercel.app/",
