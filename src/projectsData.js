@@ -1,11 +1,11 @@
 export default [
 
     {
-        title: "Crypto Price Tracker and Descentralized Exchange",
+        title: "Crypto Price Tracker and Decentralized Exchange",
         background: "crypto.png",
         liveSite: "https://crypto-prices-nine.vercel.app/",
         repository: "https://github.com/40fathoms/crypto-prices",
-        description: 'Crypto price tracker built on React. A list of the top 50 cryptocurrencies, ranked by market cap, is displayed. A wallet containing a bag of USDC is provided, which can be used to buy other cryptocurrencies in the "swap" section, which simulates a descentralized exchange. Crypto data was fetched from the coinstats public API.',
+        description: 'Crypto price tracker built on React. A list of the top 50 cryptocurrencies, ranked by market cap, is displayed. A wallet containing a bag of USDC is provided, which can be used to buy other cryptocurrencies in the "swap" section, which simulates a decentralized exchange. Crypto data was fetched from the coinstats public API.',
         tools: ["API", "React", "CSS/SASS", "HTML"]
     },
     
