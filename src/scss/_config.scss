@@ -1,18 +1,30 @@
-html{
-    font-size: 100%;  // control zoom level
-    box-sizing: border-box; // include padding in final width
+html {
+    font-size: 100%; // control zoom level
+    box-sizing: border-box; // include padding in final width    
 }
 
-*, *::before, *::after{
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
-a, a:visited, a:hover{
+a,
+a:visited,
+a:hover {
     text-decoration: none;
 }
 
+body {
+    margin: 0;
+    background-color: $black;
+    font-family: "Karla", sans-serif;
+    overflow-x: hidden;
+}
+
+
 //return button for Projects and Experience pages
-.return-button{
+.return-button {
 
     position: fixed;
     top: 2rem;
@@ -28,16 +40,16 @@ a, a:visited, a:hover{
     align-items: center;
 
     padding: 0.5rem;
-      
+
     font-size: 1.5rem;
     font-weight: 700;
 
-    @include breakpoint-up(medium){    
+    @include breakpoint-up(medium) {
         left: 1.5rem;
     }
 
     //glitch hover button    
-    &::after{
+    &::after {
         content: attr(data-text);
         display: block;
         border-radius: 50%;
@@ -52,13 +64,38 @@ a, a:visited, a:hover{
         clip-path: $slice-0;
     }
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         color: $pink;
-        &::after{
+
+        &::after {
             animation: 0.2s glitch-hover;
             animation-timing-function: steps(1, end);
         }
+    }
+}
+
+// loading for Projects and Experience pages
+.loading {
+    height: 100vh;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    font-size: 2.5rem;
+    position: relative;
+    text-shadow: 2px 2px $pink;
+
+    //glitch welcome
+    &::after {
+        content: attr(data-text);
+        display: block;
+        position: absolute;
+        text-shadow: -3px -3px 0px $yellow, 3px 3px 0px $blue;
+        clip-path: $slice-0;
+        animation: glitch-welcome 1s infinite;
+        z-index: 2;
     }
 }
 

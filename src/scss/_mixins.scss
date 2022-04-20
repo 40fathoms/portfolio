@@ -1,15 +1,3 @@
-//Set font color
-@function set-text-color($color){
-    @if (lightness($color) > 40%){
-        @return $darkPrimaryColor;
-    }
-    @else{
-        @return $white;
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////
-
 //Breakpoints
 
 // 376px, 640px, 950px, 1440px
@@ -31,22 +19,3 @@ $breakpoints-down: ("xsmall":"23.4375em", "small":"39.9375em", "medium": "59.312
         @content;
     }
 }
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-
-
-//Visibility
-.hide-for-mobile{
-    @include breakpoint-down(medium){
-        display: none;
-    }
-}
-
-.hide-for-desktop{
-    @include breakpoint-up(large){
-        display: none;
-    }
-}
-
-//////////////////////////////////////////////////////////////////////////////////////////////
-

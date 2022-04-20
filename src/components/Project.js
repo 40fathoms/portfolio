@@ -12,7 +12,7 @@ const Project = (props) => {
             <div className="projects-image">
 
                 {/* project background image */}
-                <img src={require(`../images/${props.background}`)} alt="Project image" />
+                <img src={require(`../images/${props.background}`)} alt="Project" />
                 
                 {/* hover background effect */}
                 <div className="projects-image-cover"></div>
@@ -48,7 +48,7 @@ const Project = (props) => {
                     {
                         props.tools.map(tool => {
                             return(
-                                <span>{tool}</span>
+                                <span key={nanoid()}>{tool}</span>
                             )
                         })
                     }
